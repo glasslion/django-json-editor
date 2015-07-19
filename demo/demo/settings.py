@@ -30,13 +30,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'djjsonfieldeditor',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,6 +65,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
