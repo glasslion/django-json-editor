@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.forms import widgets
 from django.forms.utils import flatatt
+from django.template.loader import render_to_string
 from django.utils.html import format_html
+from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
+from django.template.loader import render_to_string
 
 
-WIDGET_="""
-<div {}>
-</div>
-"""
 class JSONEditorWidget(widgets.Widget):
     input_type = 'hidden'
 
@@ -22,14 +21,13 @@ class JSONEditorWidget(widgets.Widget):
         )
 
     def render(self, name, value, attrs=None):
-        u"""Render CodeMirrorTextarea"""
-        final_attrs = self.build_attrs(attrs, name=name)
+        u"""Render the JSON editor"""
 
-        output = [
-            format_html('<div{}></div>', flatatt(final_attrs)),
-            '<script type="text/javascript">new JSONEditor(document.getElementById(%s));</script>' % (
-                '"id_%s"' % name,
-            )
-        ]
-        return mark_safe('\n'.join(output))
+        kws = {}
+        kws['data_input_id'] = 'id_%s' % name
+        kws['data_input_attrs'] = flatatt(self.build_attrs(attrs, name=name))
+        kws['json_value'] = value
+        kws['editor_div_id'] = 'jsoneditor_id_%s' % name
+
+        return mark_safe(render_to_string('djjsoneditor/editor_widget.html', kws))
 
