@@ -16,9 +16,9 @@ class JSONEditorWidget(widgets.Widget):
     def media(self):
         return widgets.Media(
             css={
-                'all': ('djjsonfieldeditor/jsoneditor.min.css',)
+                'all': ('djjsoneditor/jsoneditor.min.css',)
             },
-            js=['djjsonfieldeditor/jsoneditor.min.js']
+            js=['djjsoneditor/jsoneditor.min.js']
         )
 
     def render(self, name, value, attrs=None):

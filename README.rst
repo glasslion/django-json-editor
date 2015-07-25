@@ -24,7 +24,7 @@ Install django-jsonfield-editor::
 
 Then use it in a project::
 
-    import djjsonfieldeditor
+    import djjsoneditor
 
 Features
 --------
