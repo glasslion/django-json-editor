@@ -9,7 +9,6 @@ from django.template.loader import render_to_string
 
 
 class JSONEditorWidget(widgets.Widget):
-    input_type = 'hidden'
 
     @property
     def media(self):
