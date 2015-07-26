@@ -1,12 +1,22 @@
-<input type="hidden" {{ data_input_attrs }} value="{{json_value}}">
+{% autoescape off %}
+<input type="hidden" {{ data_input_attrs }} value='{{json_value}}'>
 <div id="{{editor_div_id}}"></div>
 <script type="text/javascript">
 var jsoneditor_data_input = document.getElementById("{{data_input_id}}");
 var jsoneditor_div = document.getElementById("{{editor_div_id}}");
 
-editor = new JSONEditor(jsoneditor_div);
-
 function update_jsoneditor_data(){
 
 }
+var options = {
+    "mode": "tree",
+    "modes": ['code', 'form', 'text', 'tree', 'view'],
+    "indentation": 2,
+    change: function () {
+        jsoneditor_data_input.value= JSON.stringify(editor.get());
+    }
+};
+
+editor = new JSONEditor(jsoneditor_div, options, JSON.parse('{{json_value}}'));
 </script>
+{% endautoescape %}
