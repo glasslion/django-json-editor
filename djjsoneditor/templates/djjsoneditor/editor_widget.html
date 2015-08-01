@@ -13,7 +13,7 @@ var options = {
         jsoneditor_data_input.value= editor.getText();
     }
 };
-
-var editor = new JSONEditor(jsoneditor_div, options, JSON.parse('{{json_value}}'));
+var init_json = {{json_value}};
+var editor = new JSONEditor(jsoneditor_div, options, init_json);
 </script>
 {% endautoescape %}
