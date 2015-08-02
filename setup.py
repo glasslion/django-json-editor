@@ -18,13 +18,13 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='django-jsonfield-editor',
+    name='django-json-editor',
     version=version,
     description="""A powerful json web editor for django""",
     long_description=readme + '\n\n' + history,
     author='Leo Zhou',
     author_email='glasslion@gmail.com',
-    url='https://github.com/glasslion/django-jsonfield-editor',
+    url='https://github.com/glasslion/django-json-editor',
     packages=[
         'djjsoneditor',
     ],

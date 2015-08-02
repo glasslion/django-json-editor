@@ -39,7 +39,7 @@ coverage:
 	open htmlcov/index.html
 
 docs:
-	rm -f docs/django-jsonfield-editor.rst
+	rm -f docs/django-json-editor.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ djjsoneditor
 	$(MAKE) -C docs clean

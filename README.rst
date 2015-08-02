@@ -1,26 +1,26 @@
 =============================
-django-jsonfield-editor
+django-json-editor
 =============================
 
-.. image:: https://badge.fury.io/py/django-jsonfield-editor.png
-    :target: https://badge.fury.io/py/django-jsonfield-editor
+.. image:: https://badge.fury.io/py/django-json-editor.png
+    :target: https://badge.fury.io/py/django-json-editor
 
-.. image:: https://travis-ci.org/glasslion/django-jsonfield-editor.png?branch=master
-    :target: https://travis-ci.org/glasslion/django-jsonfield-editor
+.. image:: https://travis-ci.org/glasslion/django-json-editor.png?branch=master
+    :target: https://travis-ci.org/glasslion/django-json-editor
 
 A powerful json
 
 Documentation
 -------------
 
-The full documentation is at https://django-jsonfield-editor.readthedocs.org.
+The full documentation is at https://django-json-editor.readthedocs.org.
 
 Quickstart
 ----------
 
-Install django-jsonfield-editor::
+Install django-json-editor::
 
-    pip install django-jsonfield-editor
+    pip install django-json-editor
 
 Then use it in a project::
 
