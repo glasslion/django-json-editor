@@ -11,15 +11,13 @@ try:
 except ImportError:
     from distutils.core import setup
 
-version = djjsoneditor.__version__
-
 
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='django-json-editor',
-    version=version,
+    version='0.1.0',
     description="""A powerful json web editor for django""",
     long_description=readme + '\n\n' + history,
     author='Leo Zhou',
